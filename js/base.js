@@ -110,7 +110,17 @@ var questions = [
 		question: '1+1',
 		equals: '=2',
 		answer: 'true'
-	}
+	},
+	{
+		question: '8+7',
+		equals: '=15',
+		answer: 'true'
+	},
+	{
+		question: '10+5',
+		equals: '=13',
+		answer: 'false'
+	},
 ];
 
 var color_bg = [
@@ -146,7 +156,9 @@ APP = {
 		$('[layout]').removeClass('shake');
 		$('[layout]').attr('style', 'background-color:'+_this.bg_colors[rnd_color]);
 		// window.addEventListener('mouseup', this.clickEffect.bind(this), true);
-		$('[play-again]').unbind('click').click(function() { _this.startOver(); })
+		$('[play-again]').unbind('click').click(function() { _this.startOver(); });
+		$('[show-app-info]').unbind('click').click(function() { _this.showInfo(); });
+		$('[close-info]').unbind('click').click(function() { _this.hideInfo(); });
 	},
 	startOver: function() {
 		// console.log('Start Over');
@@ -188,6 +200,14 @@ APP = {
 		var _this = this;
 		$('[timer]').remove();
 		$('[layout]').prepend(_this.timer_html);
+	},
+	showInfo: function() {
+		$('[overlay]').addClass('display');
+		$('[app-info]').addClass('display');
+	},
+	hideInfo: function() {
+		$('[overlay]').removeClass('display');
+		$('[app-info]').removeClass('display');
 	}
 	// clickEffect: function(e) {
 	// 	var target = $('[clicked]');

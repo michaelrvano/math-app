@@ -2,6 +2,7 @@
 
 // colors
 $blue: #1E80C1;
+$red: #D02222;
 $grey: #666;
 $light-grey: #ddd;
 $dark-grey: #999;
@@ -319,7 +320,7 @@ img.limit {max-width:180px;}
 	.false {
 		margin-right:2%;
 		right:0;
-		color:#D02222;
+		color:$red;
 	}
 	&.shake {
 		animation-name: shake;
@@ -397,6 +398,53 @@ img.limit {max-width:180px;}
 	}
 }
 
+.info {
+	background-color:#fff;
+	@include box-shadow(0, 0, 5px, 0, rgba(255,255,255,0.5));
+	color:$dark-grey;
+	font-weight:normal;
+	left:0;
+	margin:0 auto;
+	opacity:0;
+	padding:35px 15px 60px;
+	position:fixed;
+	right:0;
+	text-align:center;
+	visibility: hidden;
+	top:5%;
+	@include transition(all, 300ms, ease);
+	width:300px;
+	z-index:10000;
+	.close-info {
+		color:$red;
+		font-size:30px;
+		position:absolute;
+		right:8px;
+		top:0px;
+	}
+	&.display {
+		@include transform(translateY(5%));
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.overlay {
+	background-color:#000;
+	bottom:0;
+	left:0;
+	opacity:0;
+	position:fixed;
+	right:0;
+	top:0;
+	visibility: hidden;
+	@include transition(all, 300ms, linear);
+	z-index:9999;
+	&.display {
+		opacity:0.75;
+		visibility: visible;
+	}
+}
 
 
 
