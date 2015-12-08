@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Math App for Vretta - Michael Vano - UI/UX/Front End Developer</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="Math App for Vretta" name="description" />
+	<meta content="Michael Vano" name="author" />
+
+	<meta property="og:title" content="Math App by Michael Vano" />
+	<meta property="og:site_name" content="Math App" />
+	<meta property="og:url" content="http://portfolio.af13.ca/math-app" />
+	<meta property="og:description" content="Math App for Vretta" />
+	<meta property="og:image" content="https://avatars0.githubusercontent.com/u/5809316?v=3&s=460" />
+
+	<link rel="canonical" href="http://portfolio.af13.ca/math-app" />
+	<link rel="shortcut icon" href="img/favicon.png"  type="image/png">
+
+	<!-- STYLES -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
+	<link href="css/base.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="layout" layout>
+		<div class="score" score>0</div>
+		<div class="volume" volume>
+			<i class="fa fa-volume-down"></i>
+		</div>
+		<div question></div>
+		<div class="true" answer="true">
+			<i class="fa fa-check"></i>
+		</div>
+		<div class="false" answer="false">
+			<i class="fa fa-times"></i>
+		</div>
+	</div>
+	<div class="gameover" gameover>
+		<div class="stats">
+			Game Over
+			<div class="score">
+				<span class="label">New</span>
+				<span score></span>
+			</div>
+			<div class="best">
+				<span class="label">Best</span>
+				<span best></span>
+			</div>
+		</div>
+		<div class="buttons">
+			<div class="play-again" play-again>
+				<i class="fa fa-play"></i>
+			</div>
+			<div class="main-menu">
+				<i class="fa fa-list"></i>
+			</div>
+		</div>
+	</div>
+	<div class="hide">
+		<div class="question" template="question">
+			<div class="equation" equation></div>
+			<div class="equals" equals></div>
+		</div>
+		<div toggler-timer></div>
+	</div>
+	<div class="clicked" clicked></div>
+	<!-- SCRIPTS -->
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/sweetalert.min.js" type="text/javascript"></script>
+	<script src="js/base.js" type="text/javascript"></script>
+</body>
+</html>
+
